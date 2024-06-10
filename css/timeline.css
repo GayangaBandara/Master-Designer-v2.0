@@ -151,7 +151,7 @@ img::-moz-selection, img::selection {
 }
 .timeline-experience .timeline-job-info {
   position: absolute;
-  left: -185px;
+  left: -240px;
   top: 0;
 }
 .timeline-experience .timeline-job-info .timeline-title {
