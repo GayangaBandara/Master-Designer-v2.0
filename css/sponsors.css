@@ -1,0 +1,31 @@
+.sponsor-marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.sponsor-marquee-box {
+    display: flex;
+    animation: marquee 18s linear infinite;
+}
+
+.sponsor-marquee-content {
+    display: flex;
+}
+
+.sponsor-marquee-content img {
+    display: inline-block;
+    filter: sepia(1);
+    width: 300px;
+    height: 300px;
+    margin: 0 20px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

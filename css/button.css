@@ -1,0 +1,83 @@
+
+.r_button {
+    margin-top: -10%;
+    color: black;
+    margin-left:42%;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    width: 250px;
+    height: 60PX;
+    border-radius: 40px;
+    background: #ffffff0a;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-color: #ededed;
+
+    &>span.text {
+        color: #121212;
+        width: 100%;
+        text-align: left;
+        padding-block: 12px;
+        padding-left: 24px;
+        z-index: 2;
+        transition: all 200ms ease;
+    }
+
+    &>div.overlay {
+        color: #ffffff;
+        width: 48px;
+        height: calc(100% - 2px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 12px;
+        border-radius: 40px;
+        background: #504b9f;
+        border-color: #504b9f;
+        position: absolute;
+        right: 1px;
+        z-index: 1;
+        transition: all 400ms ease;
+    }
+
+    &:is(:hover, :focus) {
+        &>span.text {
+            color: #ededed;
+        }
+
+        &>div.overlay {
+            width: calc(100% - 2px);
+            transition: width 200ms ease;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .r_button {
+        margin-top: -50%;
+        margin-left: 23%;
+        width: 200px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .r_button > span.text {
+        padding-left: 16px;
+    }
+
+    .r_button > div.overlay {
+        width: 36px;
+        height: calc(100% - 2px);
+        padding: 8px;
+    }
+
+    .r_button:hover > div.overlay,
+    .r_button:focus > div.overlay {
+        width: calc(100% - 2px);
+    }
+}
